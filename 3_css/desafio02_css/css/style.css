@@ -1,0 +1,13 @@
+#box {
+    background-color: #123;
+    padding: 10px;
+    margin: 10px;
+    border: 5px solid #530;
+    outline: 5px solid #2809c779;
+}
+
+.title {
+    background-color: black;
+    color: white;
+    border: none;
+}
