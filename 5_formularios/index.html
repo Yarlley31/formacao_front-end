@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>formulários</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <h2>Formulários HTML</h2>
+    <!-- 1 - Primeiro formulário -->
+    <!-- 2 - Atributos do formulário -->
+    <form action="register.php" method="GET">
+        <div>
+            <label>Nome:</label>
+            <input type="text" />
+        </div>
+        <!-- 3 - Atributo name -->
+        <div>
+            <!-- 4 - Atributo label -->
+            <label for="age">Idade:</label>
+            <input type="text" name="age" />
+        </div>
+        <!-- 6 - select -->
+        <div>
+            <label for="job">Selecione sua profissão:</label>
+            <select name="job">
+                <option value="programador">Programador</option>
+                <option value="tester">Tester/QA</option>
+                <option value="biologo">Biólogo</option>
+            </select>
+        </div>
+        <!-- 7 - Atributo selected -->
+        <div>
+            <label for="contract">Você leu os termos do contrato?</label>
+            <select name="contract">
+                <option value="sim">Sim</option>
+                <option value="nao" selected>Não</option>
+            </select>
+        </div>
+        <!-- 8 - multiplas seleções -->
+        <div>
+            <label for="itens">Selecione os itens desejados:</label>
+            <select name="itens" multiple>
+                <option value="pera">Pera</option>
+                <option value="feijao">Feijão</option>
+                <option value="arroz">Arroz</option>
+                <option value="milho">Milho</option>
+            </select>
+        </div>
+        <!-- 9 - textarea -->
+        <div>
+            <label for="comentarios">Escreva abaixo o que você achou do post:</label>
+            <textarea name="comment"></textarea>
+        </div>
+        <!-- 5 - envio de form -->
+        <input type="submit" value="Enviar" />
+    </form>
+</body>
+</html>
