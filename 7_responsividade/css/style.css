@@ -8,3 +8,27 @@ h1 {
         color: blue;
     }
 }
+
+/* 3 - min-width */
+p {
+    background-color: red;
+    color: #000;
+}
+
+@media screen and (min-width: 800px) {
+    p {
+        background-color: #789;
+        color: red;
+    }
+}
+
+/* 4 - landspace */
+h3 {
+    display: none;
+}
+
+@media screen and (orientation: landspace) /* and (max-width: 500px) (poderia add mais coisas aqui) */ {
+    h3 {
+        display: block;
+    }
+}
