@@ -1,0 +1,17 @@
+body {
+    padding-bottom: 500px
+}
+
+/* 1 - flex */
+.flex {
+    display: flex;
+    background-color: #ddd;
+    margin-bottom: 200px;
+}
+
+/* 2 - flex column */
+.flex-column {
+    display: flex;
+    flex-direction: column;
+    background-color: #ccc;
+}
