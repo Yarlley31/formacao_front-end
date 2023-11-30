@@ -4,7 +4,7 @@ function minhaFuncao() {
 }
 
 minhaFuncao()
-minhaFuncao()
+minhaFuncao() // Aqui um exemplo de reutilização
 
 const minhaFuncaoEmVariavel = function () {
     console.log("Função em variável")
@@ -162,3 +162,78 @@ const repeatText = (text, repeat = 2) => {
 repeatText("Testando")
 
 repeatText("Agora repete 5 vezes", 5)
+
+// 9 - closure
+function someFunction() {
+    let txt = "Alguma coisa"
+
+    function display() {
+        console.log(txt)
+    }
+
+    display()
+}
+
+someFunction()
+
+// 10 - Mais sobre closure
+const multiplicationClosure = (n) => {
+    return (n) => {
+        return n * n
+    }
+}
+const c1 = multiplicationClosure(5)
+
+const c2 = multiplicationClosure(10)
+
+console.log(c1)
+
+console.log(c2)
+
+console.log(c1(5))
+
+console.log(c2(10))
+
+// 11 - recursion
+const untilTen = (n, m) => {
+    if(n < 10) {
+        console.log("A função parou de execultar!")
+    } else {
+        const x = n - m
+
+        console.log(x)
+
+        untilTen(x, m)
+    }
+}
+
+untilTen(100, 7)
+
+// infinite recursion
+// function run() {
+//     console.log("Executando")
+//     run()
+// }
+
+// run()
+
+function fatorial(x) {
+    if(x === 0) {
+        return 1
+    } else {
+        return x * fatorial(x - 1)
+    }
+}
+
+const num = 6
+
+const result = fatorial(num)
+
+console.log(`O fatorial do número ${num} é ${result}`)
+
+// Praticando
+function somando(n1, n2) {
+    return n1 + n2
+}
+
+console.log(somando(3, 2))
