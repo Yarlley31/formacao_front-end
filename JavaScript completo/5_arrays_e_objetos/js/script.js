@@ -216,3 +216,99 @@ const posts = [
 posts.forEach((post) => {
     console.log(`Exibindo post: ${post.title}, da categoria: ${post.category}`)
 })
+
+// 16 - includes
+const brands = ["BMW", "VW", "Fiat"]
+
+console.log(brands.includes("Fiat"))
+
+console.log(brands.includes("KIA"))
+
+if(brands.includes("BMW")) {
+    console.log("Há carros da marca BMW!")
+}
+
+// 17 - reverse
+const reverseTeste = [1, 2, 3, 4, 5]
+
+reverseTeste.reverse()
+
+console.log(reverseTeste)
+
+// 18 - trim
+const trimTeste = "   testando \n  "
+
+console.log(trimTeste)
+
+console.log(trimTeste.trim())
+
+console.log(trimTeste.length)
+
+console.log(trimTeste.trim().length)
+
+// 19 - padStart
+const testePadStart = "1"
+
+const newNumber = testePadStart.padStart(4, "0")
+
+console.log(testePadStart)
+
+console.log(newNumber)
+
+const testePadEnd = newNumber.padEnd(10, "0")
+
+console.log(testePadEnd)
+
+// 20 - split
+const frase = "O rato roeu a roupa do rei de Roma"
+
+const arrayDaFrase = frase.split(" ")
+
+console.log(arrayDaFrase)
+
+// 21 - join
+const fraseDeNovo = arrayDaFrase.join(" ")
+
+console.log(fraseDeNovo)
+
+const itensParaComprar = ["Mouse", "Teclado", "Monitor"]
+
+const fraseDeCompra = `Precisamos comprar: ${itensParaComprar.join(", ")}`
+
+console.log(fraseDeCompra)
+
+// 22 - repeat
+const palavra = "testando \n"
+
+console.log(palavra.repeat(5))
+
+// 23 - rest operator
+
+const somaInfinita = (...args) => {
+    let total = 0
+
+    for(let i = 0; i < args.length; i++) {
+        total += args[i]
+    }
+
+    return total
+}
+
+console.log(somaInfinita(1, 2, 3))
+
+console.log(somaInfinita(1, 2, 3, 6, 12, 7, 3))
+
+// 24 - for of
+const somaInfinita2 = (...args) => {
+    let total = 0
+
+    for(num of args) {
+        total += num
+    }
+
+    return total
+}
+
+console.log(somaInfinita2(1, 2, 4))
+
+console.log(somaInfinita2(8, 7, 3, 12, 56, 756, 88))
