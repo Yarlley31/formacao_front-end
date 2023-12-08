@@ -186,6 +186,7 @@ console.log(Yarlley.idade)
 console.log(Humano.prototype.idade)
 
 // 12 - symbol
+// Os symbols seria para variaveis que temos certeza que não vai mudar como o exemplo abaixo
 class Aviao {
     constructor(marca, turbina) {
         this.marca = marca
@@ -206,3 +207,60 @@ console.log(boeing)
 console.log(boeing[asas])
 
 console.log(boeing[pilotos])
+
+// 13 - get e set
+class Post {
+    constructor(titulo, descricao, tags) {
+        this.titulo = titulo
+        this.descricao = descricao
+        this.tags = tags
+    }
+
+    get exibirTitulo() {
+        return `Você está lendo: ${this.titulo}`
+    }
+
+    set adicionarTags(tags) {
+        const tagsArray = tags.split(", ")
+        this.tags = tagsArray
+    }
+}
+
+const myPost = new Post("Algum post", "É um post sobre programação")
+
+console.log(myPost)
+
+console.log(myPost.exibirTitulo)
+
+myPost.adicionarTags = "Programação, JavaScript, Pyhon"
+
+console.log(myPost)
+
+// 14 - herança
+class Mamifero {
+    constructor(patas) {
+        this.patas = patas
+    }
+}
+
+class Lobo extends Mamifero {
+    constructor(patas, nome) {
+        super(patas, patas)
+        this.nome = nome
+    }
+}
+
+const shark = new Lobo(4, "shark")
+
+console.log(shark)
+
+console.log(shark.patas)
+
+// 15 - instenceof
+console.log(shark instanceof Lobo)
+
+console.log(Lobo instanceof Mamifero)
+
+console.log(new Lobo(4, "teste") instanceof Mamifero)
+
+console.log(new Post("a", "b") instanceof Lobo)
