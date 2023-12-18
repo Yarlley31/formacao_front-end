@@ -92,3 +92,13 @@ console.log(footer.clientHeight)
 const products1 = products[0]
 
 console.log(products1.getBoundingClientRect())
+
+// 13 - estilos com JS
+maincontainer.style.color = "red"
+maincontainer.style.backgroundColor = "lightblue"
+maincontainer.style.paddingBottom = "20px"
+
+// 14 - alterando estilos de vários elementos
+for(const li of listItens) {
+    li.style.backgroundColor = "yellow"
+}
